@@ -63,7 +63,3 @@ reg1<-lm(sat~logtak+years+expend+rank,data=sat2)
 summary(reg1)          # Regression summary
 ols_press(reg1)        # Computes PRESS statistic
 
-
-# Hierarchy principle using hierarchical = TRUE
-reg_toy <- lm(sat~logtak+years+expend+rank+I(expend*logtak),data=sat2)
-ols_step_backward_p(reg_toy, p_val = 0.05, details = TRUE, hierarchical = TRUE) 
